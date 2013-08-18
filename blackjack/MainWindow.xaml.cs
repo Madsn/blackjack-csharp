@@ -7,7 +7,6 @@ namespace blackjack
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool autoPlay = false;
         Player player;
         Deck deck;
         Dealer dealer;
@@ -38,9 +37,6 @@ namespace blackjack
             player.resetHand();
             dealer.resetHand();
             currentBet = 0;
-            player.getCard(deck.getNextCard());
-            player.getCard(deck.getNextCard());
-            dealer.getCard(deck.getNextCard());
             playerTurn();
             refreshGUI();
         }
@@ -80,9 +76,17 @@ namespace blackjack
                 ErrorMsg.Content = "Must enter numeric bet above 0";
                 return;
             }
-            // unlock hit/stay buttons
+            if (currentBet > player.getChipBalance())
+            {
+                ErrorMsg.Content = "Insufficient funds";
+                return;
+            }
+            player.getCard(deck.getNextCard());
+            player.getCard(deck.getNextCard());
+            dealer.getCard(deck.getNextCard());
             CurrentBetLabel.Content = currentBet;
             playerTurn();
+            refreshGUI();
         }
 
         private void HitButton_Click(object sender, RoutedEventArgs e)
@@ -140,6 +144,12 @@ namespace blackjack
             HitButton.IsEnabled = false;
             StayButton.IsEnabled = false;
             player.loseChips(currentBet);
+            if (player.getChipBalance() < 1)
+            {
+                refreshGUI();
+                ErrorMsg.Content = "You're broke! Game over.";
+                return;
+            }
             NextRoundButton.IsEnabled = true;
         }
 

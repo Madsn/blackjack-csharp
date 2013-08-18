@@ -43,11 +43,6 @@ D:\repo\blackjack\blackjack\obj\Debug\poker_MarkupCompile.cache
 D:\repo\blackjack\blackjack\obj\Debug\poker.g.resources
 D:\repo\blackjack\blackjack\obj\Debug\blackjack.Properties.Resources.resources
 D:\repo\blackjack\blackjack\obj\Debug\blackjack.csproj.GenerateResource.Cache
-D:\repo\blackjack-csharp\blackjack\bin\Debug\poker.exe.config
-D:\repo\blackjack-csharp\blackjack\obj\Debug\poker.exe
-D:\repo\blackjack-csharp\blackjack\obj\Debug\poker.pdb
-D:\repo\blackjack-csharp\blackjack\bin\Debug\poker.exe
-D:\repo\blackjack-csharp\blackjack\bin\Debug\poker.pdb
 D:\repo\blackjack-csharp\blackjack\bin\Debug\nunit-console-runner.dll
 D:\repo\blackjack-csharp\blackjack\bin\Debug\nunit-gui-runner.dll
 D:\repo\blackjack-csharp\blackjack\bin\Debug\nunit.core.dll
@@ -62,7 +57,12 @@ D:\repo\blackjack-csharp\blackjack\obj\Debug\blackjack.csprojResolveAssemblyRefe
 D:\repo\blackjack-csharp\blackjack\obj\Debug\MainWindow.baml
 D:\repo\blackjack-csharp\blackjack\obj\Debug\MainWindow.g.cs
 D:\repo\blackjack-csharp\blackjack\obj\Debug\App.g.cs
-D:\repo\blackjack-csharp\blackjack\obj\Debug\poker_MarkupCompile.cache
-D:\repo\blackjack-csharp\blackjack\obj\Debug\poker.g.resources
 D:\repo\blackjack-csharp\blackjack\obj\Debug\blackjack.Properties.Resources.resources
 D:\repo\blackjack-csharp\blackjack\obj\Debug\blackjack.csproj.GenerateResource.Cache
+D:\repo\blackjack-csharp\blackjack\bin\Debug\blackjack.exe.config
+D:\repo\blackjack-csharp\blackjack\bin\Debug\blackjack.exe
+D:\repo\blackjack-csharp\blackjack\bin\Debug\blackjack.pdb
+D:\repo\blackjack-csharp\blackjack\obj\Debug\blackjack_MarkupCompile.cache
+D:\repo\blackjack-csharp\blackjack\obj\Debug\blackjack.g.resources
+D:\repo\blackjack-csharp\blackjack\obj\Debug\blackjack.exe
+D:\repo\blackjack-csharp\blackjack\obj\Debug\blackjack.pdb
