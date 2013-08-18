@@ -86,8 +86,8 @@
     <Compile Include="Dealer.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Tests\CardTest.cs" />
-    <Compile Include="Tests\DealerTest.cs" />
     <Compile Include="Tests\DeckTest.cs" />
+    <Compile Include="Tests\GameTest.cs" />
     <Compile Include="Tests\PlayerTest.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

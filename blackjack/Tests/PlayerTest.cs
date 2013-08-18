@@ -66,10 +66,11 @@ namespace blackjack.Tests
             player.getCard(new Card(2, 2));
             player.getCard(new Card(5, 3));
             Assert.AreEqual(player.getScore(), 7);
-            player.getCard(new Card(1, 2)); // An Ace is worth 14 when beneficial
-            Assert.AreEqual(player.getScore(), 21);
+            player.getCard(new Card(1, 2)); // An Ace is worth 11 when beneficial
+            Assert.AreEqual(player.getScore(), 18);
+            player.getCard(new Card(2, 1));
             player.getCard(new Card(1, 1)); // But only 1 when otherwise bust
-            Assert.AreEqual(player.getScore(), 9);
+            Assert.AreEqual(player.getScore(), 21);
         }
     }
 }

@@ -41,7 +41,7 @@ namespace blackjack
             }
         }
 
-        internal Card getNextCard()
+        public Card getNextCard()
         {
             int index = cards.Count - 1; // remove the last card
             Card drawnCard = cards.ElementAt(index);

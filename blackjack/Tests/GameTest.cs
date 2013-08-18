@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace blackjack.Tests
 {
-    class DealerTest
+    class GameTest
     {
     }
 }
