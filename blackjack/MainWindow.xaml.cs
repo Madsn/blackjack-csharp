@@ -27,11 +27,6 @@ namespace blackjack
             playerTurn();
         }
 
-        private void StartButton_Click(object sender, RoutedEventArgs e)
-        {
-            startGame();
-        }
-
         private void startRound()
         {
             player.resetHand();
@@ -58,54 +53,6 @@ namespace blackjack
             {
                 DealerHandBox.Text += c.ToString() + "\n";
             }
-        }
-
-        private void BetButton_Click(object sender, RoutedEventArgs e)
-        {
-            // accept player bet
-            try
-            {
-                currentBet = int.Parse(BetAmount.Text);
-            }
-            catch (System.FormatException error)
-            {
-                currentBet = 0;
-            }
-            if (currentBet <= 0)
-            {
-                ErrorMsg.Content = "Must enter numeric bet above 0";
-                return;
-            }
-            if (currentBet > player.getChipBalance())
-            {
-                ErrorMsg.Content = "Insufficient funds";
-                return;
-            }
-            player.getCard(deck.getNextCard());
-            player.getCard(deck.getNextCard());
-            dealer.getCard(deck.getNextCard());
-            CurrentBetLabel.Content = currentBet;
-            playerTurn();
-            refreshGUI();
-        }
-
-        private void HitButton_Click(object sender, RoutedEventArgs e)
-        {
-            player.getCard(deck.getNextCard());
-            refreshGUI();
-            if (player.getScore() > 21)
-            {
-                ErrorMsg.Content = "Player bust. House wins";
-                dealerWins();
-            }
-        }
-
-        private void StayButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Start dealer turn
-            StayButton.IsEnabled = false;
-            HitButton.IsEnabled = false;
-            dealerTurn();
         }
 
         private void dealerTurn()
@@ -167,6 +114,59 @@ namespace blackjack
                 HitButton.IsEnabled = true;
                 StayButton.IsEnabled = true;
             }
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            startGame();
+        }
+
+        private void BetButton_Click(object sender, RoutedEventArgs e)
+        {
+            // accept player bet
+            try
+            {
+                currentBet = int.Parse(BetAmount.Text);
+            }
+            catch (System.FormatException error)
+            {
+                currentBet = 0;
+            }
+            if (currentBet <= 0)
+            {
+                ErrorMsg.Content = "Must enter numeric bet above 0";
+                return;
+            }
+            if (currentBet > player.getChipBalance())
+            {
+                ErrorMsg.Content = "Insufficient funds";
+                return;
+            }
+            player.getCard(deck.getNextCard());
+            player.getCard(deck.getNextCard());
+            dealer.getCard(deck.getNextCard());
+            CurrentBetLabel.Content = currentBet;
+            playerTurn();
+            refreshGUI();
+        }
+
+        private void HitButton_Click(object sender, RoutedEventArgs e)
+        {
+            player.getCard(deck.getNextCard());
+            refreshGUI();
+            if (player.getScore() > 21)
+            {
+                ErrorMsg.Content = "Player bust. House wins";
+                dealerWins();
+            }
+        }
+
+        private void StayButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Start dealer turn
+            StayButton.IsEnabled = false;
+            HitButton.IsEnabled = false;
+            dealerTurn();
         }
 
         private void NextRoundButton_Click(object sender, RoutedEventArgs e)
